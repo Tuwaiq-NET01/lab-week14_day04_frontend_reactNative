@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   friends: {
     display:"flex",
-    flexDirection:"row-reverse",
+    flexDirection:"row",
     height:2000,
     flexWrap:"wrap"
   }
