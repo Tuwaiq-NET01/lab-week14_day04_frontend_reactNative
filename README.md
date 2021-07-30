@@ -1,4 +1,4 @@
-![SnapchatApp](https://github.com/Yasmin-AlGhamdi/lab-week14_day04_frontend_reactNative/blob/main/SnapchatApp.gif)
+![SnapchatStories](https://github.com/Yasmin-AlGhamdi/SnapchatApp/blob/main/SnapchatStories.gif)
 
 
 # lab-week14_day04_frontend_reactNative
