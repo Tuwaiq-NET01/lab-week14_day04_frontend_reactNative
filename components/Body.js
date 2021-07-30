@@ -1,15 +1,34 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
-
+import Card from './Card';
 export default function Body() {
     return (
         <View style={styles.bodyContainer}>
-            <View style={styles.following}>
+            <View>
                 <Text style={styles.heading}>
-                    Following  
+                    Following
                     <Entypo name="chevron-thin-right" size={14} color="grey" />
                 </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+                <Card />
+                <Card />
+                <Card />
+            </View>
+            <View>
+                <Text style={styles.heading}>
+                    Friends
+                    <Entypo name="chevron-thin-right" size={14} color="grey" />
+                </Text>
+            </View>
+            <View style={styles.sectionContainerV}>
+                <Card style={styles.item} />
+                <Card style={styles.item} />
+                <Card style={styles.item} />
+                <Card style={styles.item} />
+                <Card style={styles.item} />
+                <Card style={styles.item} />
             </View>
         </View>
     )
@@ -23,10 +42,22 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
         padding: 10,
         paddingTop: 20
-    }, 
-    heading:{
+    },
+    sectionContainer: {
+        display: "flex",
+        flexDirection: "row",
+    },
+    heading: {
         fontWeight: "bold",
         fontSize: 16,
-    }
-    });
-    
+    },
+    sectionContainerV: {
+        flex: 1,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignItems: "flex-start"
+    },
+    item: {
+        width: "50%"
+      }
+});

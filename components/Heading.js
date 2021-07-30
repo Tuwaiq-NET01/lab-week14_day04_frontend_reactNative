@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: "space-between",
         padding: 15,
-        paddingBottom: 30
+        paddingBottom: 20
       }
     });
     
