@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, Image, ImageBackground } from 'react-native'
 const image = { uri: "https://picsum.photos/200/300" };
-export default class Story extends Component {
+export default class BigStory extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -29,8 +29,8 @@ export default class Story extends Component {
 }
 const styles = StyleSheet.create({
     storyCard: {
-        width: 100,
-        height: 170
+        width: 190,
+        height: 290
     },
 
     avatar: {
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         borderColor: "white",
         alignSelf: "center",
         borderWidth: 1,
-        marginTop: 110
+        marginTop: 170
     },
     image: {
         flex: 1,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         color: "white",
         alignSelf: "center",
         fontWeight:"bold",
-        marginTop: 2,
+        marginTop: 10,
         fontSize:12
     }
 })

@@ -3,9 +3,10 @@ import { View, Text, StyleSheet, TextInput, ScrollView, Dimensions, Image, Statu
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Story from './Story'
 import Feather from 'react-native-vector-icons/Feather'
+import BigStory from './BigStory'
 const windowWidth = Dimensions.get('window').width;
 export default function App() {
-  const names = ["Abdulaziz", "Ahmed", "Ali", "Sana", "Rawabe", "Afnan", "Salwa", "Riyad", "Younes"]
+  const names = ["Hana", "Maryam", "Batool", "Samirah", "Reema", "Mohammed", "Sana", "Osama", "Ahmed"]
   const [term, useTerm] = useState("")
   const [result, useResult] = useState([])
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function App() {
   return (
 
     <View style={styles.container}>
-      <StatusBar style={{backgroundColor:"#9354bc"}}backgroundColor="#9354bc" hidden />
+      <StatusBar style={{ backgroundColor: "#9354bc" }} backgroundColor="#9354bc" hidden />
       <View style={styles.searchBox}>
         <View style={styles.leftSide}>
           <Image
@@ -28,17 +29,29 @@ export default function App() {
         </View>
         <Ionicons name="add" size={30} color="white"></Ionicons>
       </View>
-      <Text style={{ fontWeight: "bold", marginLeft: 10, marginTop: 20 }}>Following</Text>
+      <Text style={{ fontWeight: "bold", marginLeft: 10, marginTop: 20 }}>Following ➤</Text>
       <View>
-      <ScrollView style={styles.scrollV} horizontal showsHorizontalScrollIndicator={false}>
-        {result.map((name, index) => (
-          <View style={styles.stories}>
-            <Story key={index} username={name} />
-          </View>
-        ))}
-      </ScrollView>
+        <ScrollView style={styles.scrollV} horizontal showsHorizontalScrollIndicator={false}>
+          {result.map((name, index) => (
+            <View key={index} style={styles.stories}>
+              <Story key={index} username={name} />
+            </View>
+          ))}
+        </ScrollView>
       </View>
-      <Text style={{ fontWeight: "bold", marginLeft: 10, marginTop: 10 }}>Friends</Text>
+      <Text style={{ fontWeight: "bold", marginLeft: 10, marginTop: 10 }}>Friends ➤</Text>
+      <View>
+        <ScrollView style={styles.scrollV} showsHorizontalScrollIndicator={false}>
+          <View style={styles.friends} >
+            {result.map((name, index) => (
+              <View key={index} style={styles.stories}>
+              <BigStory key={index} username={name} />
+            </View>
+            ))}
+          </View>
+
+        </ScrollView>
+      </View>
       <View style={styles.footer}>
         <Feather name="message-square" size={25} color="gray"></Feather>
         <Feather name="circle" size={70} color="gray"></Feather>
@@ -69,10 +82,11 @@ const styles = StyleSheet.create({
   scrollV: {
     marginTop: 10,
     marginLeft: 10,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   stories: {
-    marginRight: 10
+    marginRight: 10,
+    marginBottom:10
   },
   footer: {
     height: 90,
@@ -92,4 +106,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     borderWidth: 1,
   },
+  friends: {
+    display:"flex",
+    flexDirection:"row-reverse",
+    height:2000,
+    flexWrap:"wrap"
+  }
 })
