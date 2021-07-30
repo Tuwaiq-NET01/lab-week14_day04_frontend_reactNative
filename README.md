@@ -1,4 +1,4 @@
-![WeatherApp](https://github.com/Yasmin-AlGhamdi/lab-week14_day04_frontend_reactNative/blob/main/SnapchatApp.gif)
+![SnapchatApp](https://github.com/Yasmin-AlGhamdi/lab-week14_day04_frontend_reactNative/blob/main/SnapchatApp.gif)
 
 
 # lab-week14_day04_frontend_reactNative
