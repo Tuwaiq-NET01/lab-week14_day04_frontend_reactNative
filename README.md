@@ -1,6 +1,6 @@
 # Snap Chat stories page
 
-Redesign snapchat user interface using react native 👩🏻‍🎨
+Redesign snapchat user home interface using react native 👩🏻‍🎨
 
 ---
 
