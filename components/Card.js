@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
         overflow: "hidden",
         borderWidth: 3,
         borderColor: "white",
-        height: 200,
-        width: 150,
-        marginTop: 10,
+        height: 220 ,
+        width: 160,
+        marginVertical: 10,
         marginRight: 10
     },
     cardInfo:{

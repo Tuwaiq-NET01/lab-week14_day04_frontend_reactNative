@@ -3,18 +3,23 @@ import React from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 import Heading from './components/Heading';
 import Body from './components/Body';
+import Nav from './components/Nav';
+
 export default function App() {
   return (
-    <ScrollView style={styles.purple}>
-      <Heading/>
+    <View style={styles.purple}>
+      <ScrollView>
+        <Heading />
+        <Body />
+      </ScrollView>
+      <Nav />
 
-      <Body/>
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  purple:{
+  purple: {
     backgroundColor: '#9053BA',
   }
 });

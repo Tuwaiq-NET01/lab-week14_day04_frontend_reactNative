@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import Card from './Card';
 export default function Body() {
@@ -11,11 +11,12 @@ export default function Body() {
                     <Entypo name="chevron-thin-right" size={14} color="grey" />
                 </Text>
             </View>
-            <View style={styles.sectionContainer}>
+            <ScrollView horizontal style={styles.sectionContainer}>
                 <Card />
                 <Card />
                 <Card />
-            </View>
+                <Card/>
+            </ScrollView>
             <View>
                 <Text style={styles.heading}>
                     Friends
@@ -56,8 +57,5 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "flex-start"
-    },
-    item: {
-        width: "50%"
-      }
+    }
 });
