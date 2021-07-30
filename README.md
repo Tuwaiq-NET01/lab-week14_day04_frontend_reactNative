@@ -2,4 +2,4 @@
 
 ### Screen Recording
 
-<img src="screenrecording.gif" />
+<img src="screenrecording.gif" width=240/>
