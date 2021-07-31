@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, TextInput, ScrollView, Dimensions, Image } from 'react-native'
 import Feather from 'react-native-vector-icons/Feather'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 import LargeCard from './components/LargeCard'
 import SmallCard from './components/SmallCard'
@@ -11,6 +12,7 @@ export default function App() {
   return (
 
     <View style={{flex:1}}>
+      <ScrollView showsVerticalScrollIndicator={false}>
       <View style={{backgroundColor: "#9354bc", paddingTop: 20}}></View>
       <View style={{
           marginBottom: 20,
@@ -40,7 +42,7 @@ export default function App() {
         </View>
         <Ionicons name="add" size={30} color="white"></Ionicons>
       </View>
-      <Text style={{ fontWeight: "bold", paddingLeft: 10, marginBottom: 10 }}>Following ➤</Text>
+      <Text style={{ fontWeight: "bold", paddingLeft: 10, marginBottom: 10 }}>Following <AntDesign name="right" size={10} color="gray" /></Text>
       <View style={{marginBottom:20}} >
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <SmallCard name={"Anas"} />
@@ -52,16 +54,15 @@ export default function App() {
         <SmallCard name={"Meshal"} />
         </ScrollView>
       </View>
-      <Text style={{ fontWeight: "bold", paddingLeft: 10, marginBottom:10 }}>Friends ➤</Text>
+      <Text style={{ fontWeight: "bold", paddingLeft: 10, marginBottom:10 }}>Friends <AntDesign name="right" size={10} color="gray" /></Text>
       <View>
-        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={
             {
               flexDirection: "row",
               flexWrap: "wrap",
               justifyContent: "space-between",
               marginHorizontal: 3,
-              marginBottom: 460
+              marginBottom: 20
             }
           } >
           <LargeCard name={"Anas"} />
@@ -72,6 +73,17 @@ export default function App() {
           <LargeCard name={"Mansour"} />
           <LargeCard name={"Meshal"} />
           </View>
+      </View>
+      <Text style={{ fontWeight: "bold", paddingLeft: 10, marginBottom: 10 }}>Suggested <AntDesign name="right" size={10} color="gray" /></Text>
+      <View style={{marginBottom:90}} >
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        <SmallCard name={"Anas"} />
+        <SmallCard name={"Saad"} />
+        <SmallCard name={"Hussan"} />
+        <SmallCard name={"Saud"} />
+        <SmallCard name={"Ahmed"} />
+        <SmallCard name={"Mansour"} />
+        <SmallCard name={"Meshal"} />
         </ScrollView>
       </View>
       <View style={
@@ -90,6 +102,7 @@ export default function App() {
         <Feather name="circle" size={70} color="gray"></Feather>
         <Feather name="more-horizontal" size={30} color="gray"></Feather>
       </View>
+      </ScrollView>
     </View>
   )
 }
