@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { View, Text, Image ,StyleSheet, TextInput, ScrollView, Dimensions  } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Feather from 'react-native-vector-icons/Feather'
+import { color } from 'react-native-reanimated';
 
 const windowWidth = Dimensions.get('window').width;
 export default function Snaps(navigation) {
@@ -36,18 +37,61 @@ export default function Snaps(navigation) {
             <Text><h1>Following &gt;</h1> </Text>
           
           <View style={styles.pics}>
+          <View style={styles.textprofile}>
+<text className="texto ">Nada</text>
+          <Image style={styles.PicSmaller}
+      
+        source={{
+          
+          uri: 'https://i.pinimg.com/474x/7e/17/b1/7e17b1b14137b402496d76153b58ca9b.jpg',
+        }}
+       
+      /></View>
+      
           <Image
        style={styles.picSnap}
+       
         source={{
           uri: 'https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300',
         }}
       />
+           <View style={styles.textprofile}>
+<text className="texto " >Nada</text>
+          <Image style={styles.PicSmaller}
+      
+        source={{
+          
+          uri: 'https://i.pinimg.com/474x/7e/17/b1/7e17b1b14137b402496d76153b58ca9b.jpg',
+        }}
+       
+      /></View>
+      
         <Image
        style={styles.picSnap}
         source={{
           uri: 'https://images.unsplash.com/photo-1544526226-d4568090ffb8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
         }}
       />
+         <View style={styles.textprofile1}>
+<text>Saad</text>
+          <Image style={styles.PicSmaller}
+      
+        source={{
+          
+          uri: 'https://gfx4arab.com/wp-content/uploads/wpdm-cache/man-face-close-up_98292-4059-900x0.jpg',
+        }}
+       
+      /></View>
+                 <View style={styles.textprofile2}>
+<text>Lana</text>
+          <Image style={styles.PicSmaller}
+      
+        source={{
+          
+          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr41M-njbg9BHF_sAVt2qN755VFMZdV-drgccZVt829zAn53CmcdnIW5ry8WcWw8PFoGA&usqp=CAU',
+        }}
+       
+      /></View>
         <Image
        style={styles.picSnap}
         source={{
@@ -160,6 +204,7 @@ borderRadius:20
         flexDirection: "row-reverse",
         justifyContent: "space-around",
         alignItems: "center",
+        margin:15
 
 
       },
@@ -173,6 +218,7 @@ borderRadius:20
         height:520,
         width:310,
         borderRadius:10,
+        margin:15
 
 
       },
@@ -185,7 +231,47 @@ borderRadius:20
         backgroundColor: "rgba(255, 255, 255, 0.8)",
         position: "absolute",
         bottom: 0
-      }
+      },
+      PicSmaller: {
+        height:50,
+width:50,
+borderRadius:25,
+position:'absolute',
+zIndex:13,
+bottom:50,
+borderColor:"white",
+
+
+      },
+      textprofile:{
+        position:'absolute',
+        zIndex:20,
+        fontSize:27,
+        bottom:40,
+        color:"white",
+      
+
+
+      },
+      textprofile1:{
+        position:'absolute',
+        left:87,
+        zIndex:20,
+        fontSize:27,
+        bottom:40,
+        color:"white",},
+        textprofile2:{
+          position:'absolute',
+          right:90,
+          zIndex:20,
+          fontSize:27,
+          bottom:40,
+          color:"white",}
+  ,
+  l:{
+justifyContent:"center"
+  },
+  
 
 
  })
